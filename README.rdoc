@@ -1,13 +1,17 @@
 = Eventful
 
-* http://github.com/jcoglan/eventful
+* http://github.com/toddsundsted/eventful
 
-+Eventful+ is a small extension on top of Ruby's +Observable+ module that
-implements named events, block listeners and event bubbling. It allows
-much more flexible event handling behaviour than is typically allowed
-by +Observable+, which requires listeners to be objects that implement
-+update+ and provides no simple way of calling subsets of observers based
-on event type.
++Eventful+ implements named events, block listeners and event
+bubbling. It allows much more flexible event handling behaviour than
+is typically allowed by +Observable+, which requires listeners to be
+objects that implement +update+ and provides no simple way of calling
+subsets of observers based on event type.
+
+This fork of +Eventful+ includes a custom variant of +Observable+
+which is compatible with Rails' ActiveRecord.  Stock +Observable+
+defines +changed+ which conflicts with the ActiveRecord definition of
++changed+.
 
 
 == Installation
