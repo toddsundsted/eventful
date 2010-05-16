@@ -3,4 +3,5 @@ Manifest.txt
 README.txt
 Rakefile
 lib/eventful.rb
+lib/eventful/observer.rb
 test/test_eventful.rb
