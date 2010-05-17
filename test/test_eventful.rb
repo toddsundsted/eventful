@@ -21,7 +21,7 @@ end
 
 class TestEventful < Test::Unit::TestCase
   def setup
-    [Foo, Bar, Eventful].each &it.delete_observers
+    [Foo, Bar, Eventful].each &it.delete_eventful_observers
   end
   
   def test_named_events
@@ -37,7 +37,7 @@ class TestEventful < Test::Unit::TestCase
     assert_equal 1, ayes
     assert_equal 3, noes
     
-    f.delete_observer(obs)
+    f.delete_eventful_observer(obs)
     f.fire(:noe, 3)
     assert_equal 1, ayes
     assert_equal 3, noes
